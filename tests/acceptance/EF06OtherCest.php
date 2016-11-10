@@ -59,6 +59,9 @@ class EF06OtherCest
         $I->see('ログインできませんでした。', '#login_mypage .text-danger');
     }
 
+    /**
+     * @group mail
+     */
     public function other_パスワード再発行(\AcceptanceTester $I)
     {
         $I->wantTo('EF0602-UC01-T01 パスワード再発行');

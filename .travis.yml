@@ -6,50 +6,50 @@ services:
   - docker
 
 env:
-  - BROWSER=firefox DB=pgsql TARGET_GROUP=front TARGET_ENV=firefox,pgsql DOCKER_COMPOSE_VERSION=1.8.0
-  - BROWSER=firefox DB=pgsql TARGET_GROUP=admin01 TARGET_ENV=firefox,pgsql DOCKER_COMPOSE_VERSION=1.8.0
-  - BROWSER=firefox DB=pgsql TARGET_GROUP=admin02 TARGET_ENV=firefox,pgsql DOCKER_COMPOSE_VERSION=1.8.0
-  - BROWSER=firefox DB=pgsql TARGET_GROUP=admin03 TARGET_ENV=firefox,pgsql DOCKER_COMPOSE_VERSION=1.8.0
-  - BROWSER=firefox DB=pgsql84 TARGET_GROUP=front TARGET_ENV=firefox,pgsql DOCKER_COMPOSE_VERSION=1.8.0
-  - BROWSER=firefox DB=pgsql84 TARGET_GROUP=admin01 TARGET_ENV=firefox,pgsql DOCKER_COMPOSE_VERSION=1.8.0
-  - BROWSER=firefox DB=pgsql84 TARGET_GROUP=admin02 TARGET_ENV=firefox,pgsql DOCKER_COMPOSE_VERSION=1.8.0
-  - BROWSER=firefox DB=pgsql84 TARGET_GROUP=admin03 TARGET_ENV=firefox,pgsql DOCKER_COMPOSE_VERSION=1.8.0
-  - BROWSER=firefox DB=mysql TARGET_GROUP=front TARGET_ENV=firefox,mysql DOCKER_COMPOSE_VERSION=1.8.0
-  - BROWSER=firefox DB=mysql TARGET_GROUP=admin01 TARGET_ENV=firefox,mysql DOCKER_COMPOSE_VERSION=1.8.0
-  - BROWSER=firefox DB=mysql TARGET_GROUP=admin02 TARGET_ENV=firefox,mysql DOCKER_COMPOSE_VERSION=1.8.0
-  - BROWSER=firefox DB=mysql TARGET_GROUP=admin03 TARGET_ENV=firefox,mysql DOCKER_COMPOSE_VERSION=1.8.0
-  - BROWSER=firefox DB=mysql51 TARGET_GROUP=front TARGET_ENV=firefox,mysql DOCKER_COMPOSE_VERSION=1.8.0
-  - BROWSER=firefox DB=mysql51 TARGET_GROUP=admin01 TARGET_ENV=firefox,mysql DOCKER_COMPOSE_VERSION=1.8.0
-  - BROWSER=firefox DB=mysql51 TARGET_GROUP=admin02 TARGET_ENV=firefox,mysql DOCKER_COMPOSE_VERSION=1.8.0
-  - BROWSER=firefox DB=mysql51 TARGET_GROUP=admin03 TARGET_ENV=firefox,mysql DOCKER_COMPOSE_VERSION=1.8.0
-  - BROWSER=chrome DB=pgsql TARGET_GROUP=front TARGET_ENV=chrome,pgsql DOCKER_COMPOSE_VERSION=1.8.0
-  - BROWSER=chrome DB=pgsql TARGET_GROUP=admin01 TARGET_ENV=chrome,pgsql DOCKER_COMPOSE_VERSION=1.8.0
-  - BROWSER=chrome DB=pgsql TARGET_GROUP=admin02 TARGET_ENV=chrome,pgsql DOCKER_COMPOSE_VERSION=1.8.0
-  - BROWSER=chrome DB=pgsql TARGET_GROUP=admin03 TARGET_ENV=chrome,pgsql DOCKER_COMPOSE_VERSION=1.8.0
-  - BROWSER=chrome DB=mysql TARGET_GROUP=front TARGET_ENV=chrome,mysql DOCKER_COMPOSE_VERSION=1.8.0
-  - BROWSER=chrome DB=mysql TARGET_GROUP=admin01 TARGET_ENV=chrome,mysql DOCKER_COMPOSE_VERSION=1.8.0
-  - BROWSER=chrome DB=mysql TARGET_GROUP=admin02 TARGET_ENV=chrome,mysql DOCKER_COMPOSE_VERSION=1.8.0
-  - BROWSER=chrome DB=mysql TARGET_GROUP=admin03 TARGET_ENV=chrome,mysql DOCKER_COMPOSE_VERSION=1.8.0
-  - BROWSER=phantomjs DB=pgsql TARGET_GROUP=front TARGET_ENV=phantomjs,pgsql DOCKER_COMPOSE_VERSION=1.8.0
-  - BROWSER=phantomjs DB=pgsql TARGET_GROUP=admin01 TARGET_ENV=phantomjs,pgsql DOCKER_COMPOSE_VERSION=1.8.0
-  - BROWSER=phantomjs DB=pgsql TARGET_GROUP=admin02 TARGET_ENV=phantomjs,pgsql DOCKER_COMPOSE_VERSION=1.8.0
-  - BROWSER=phantomjs DB=pgsql TARGET_GROUP=admin03 TARGET_ENV=phantomjs,pgsql DOCKER_COMPOSE_VERSION=1.8.0
+  - BROWSER=firefox DB=pgsql TARGET_GROUP=mail TARGET_ENV=firefox,pgsql DOCKER_COMPOSE_VERSION=1.8.0
+  # - BROWSER=firefox DB=pgsql TARGET_GROUP=admin01 TARGET_ENV=firefox,pgsql DOCKER_COMPOSE_VERSION=1.8.0
+  # - BROWSER=firefox DB=pgsql TARGET_GROUP=admin02 TARGET_ENV=firefox,pgsql DOCKER_COMPOSE_VERSION=1.8.0
+  # - BROWSER=firefox DB=pgsql TARGET_GROUP=admin03 TARGET_ENV=firefox,pgsql DOCKER_COMPOSE_VERSION=1.8.0
+  # - BROWSER=firefox DB=pgsql84 TARGET_GROUP=front TARGET_ENV=firefox,pgsql DOCKER_COMPOSE_VERSION=1.8.0
+  # - BROWSER=firefox DB=pgsql84 TARGET_GROUP=admin01 TARGET_ENV=firefox,pgsql DOCKER_COMPOSE_VERSION=1.8.0
+  # - BROWSER=firefox DB=pgsql84 TARGET_GROUP=admin02 TARGET_ENV=firefox,pgsql DOCKER_COMPOSE_VERSION=1.8.0
+  # - BROWSER=firefox DB=pgsql84 TARGET_GROUP=admin03 TARGET_ENV=firefox,pgsql DOCKER_COMPOSE_VERSION=1.8.0
+  # - BROWSER=firefox DB=mysql TARGET_GROUP=front TARGET_ENV=firefox,mysql DOCKER_COMPOSE_VERSION=1.8.0
+  # - BROWSER=firefox DB=mysql TARGET_GROUP=admin01 TARGET_ENV=firefox,mysql DOCKER_COMPOSE_VERSION=1.8.0
+  # - BROWSER=firefox DB=mysql TARGET_GROUP=admin02 TARGET_ENV=firefox,mysql DOCKER_COMPOSE_VERSION=1.8.0
+  # - BROWSER=firefox DB=mysql TARGET_GROUP=admin03 TARGET_ENV=firefox,mysql DOCKER_COMPOSE_VERSION=1.8.0
+  # - BROWSER=firefox DB=mysql51 TARGET_GROUP=front TARGET_ENV=firefox,mysql DOCKER_COMPOSE_VERSION=1.8.0
+  # - BROWSER=firefox DB=mysql51 TARGET_GROUP=admin01 TARGET_ENV=firefox,mysql DOCKER_COMPOSE_VERSION=1.8.0
+  # - BROWSER=firefox DB=mysql51 TARGET_GROUP=admin02 TARGET_ENV=firefox,mysql DOCKER_COMPOSE_VERSION=1.8.0
+  # - BROWSER=firefox DB=mysql51 TARGET_GROUP=admin03 TARGET_ENV=firefox,mysql DOCKER_COMPOSE_VERSION=1.8.0
+  # - BROWSER=chrome DB=pgsql TARGET_GROUP=front TARGET_ENV=chrome,pgsql DOCKER_COMPOSE_VERSION=1.8.0
+  # - BROWSER=chrome DB=pgsql TARGET_GROUP=admin01 TARGET_ENV=chrome,pgsql DOCKER_COMPOSE_VERSION=1.8.0
+  # - BROWSER=chrome DB=pgsql TARGET_GROUP=admin02 TARGET_ENV=chrome,pgsql DOCKER_COMPOSE_VERSION=1.8.0
+  # - BROWSER=chrome DB=pgsql TARGET_GROUP=admin03 TARGET_ENV=chrome,pgsql DOCKER_COMPOSE_VERSION=1.8.0
+  # - BROWSER=chrome DB=mysql TARGET_GROUP=front TARGET_ENV=chrome,mysql DOCKER_COMPOSE_VERSION=1.8.0
+  # - BROWSER=chrome DB=mysql TARGET_GROUP=admin01 TARGET_ENV=chrome,mysql DOCKER_COMPOSE_VERSION=1.8.0
+  # - BROWSER=chrome DB=mysql TARGET_GROUP=admin02 TARGET_ENV=chrome,mysql DOCKER_COMPOSE_VERSION=1.8.0
+  # - BROWSER=chrome DB=mysql TARGET_GROUP=admin03 TARGET_ENV=chrome,mysql DOCKER_COMPOSE_VERSION=1.8.0
+  # - BROWSER=phantomjs DB=pgsql TARGET_GROUP=front TARGET_ENV=phantomjs,pgsql DOCKER_COMPOSE_VERSION=1.8.0
+  # - BROWSER=phantomjs DB=pgsql TARGET_GROUP=admin01 TARGET_ENV=phantomjs,pgsql DOCKER_COMPOSE_VERSION=1.8.0
+  # - BROWSER=phantomjs DB=pgsql TARGET_GROUP=admin02 TARGET_ENV=phantomjs,pgsql DOCKER_COMPOSE_VERSION=1.8.0
+  # - BROWSER=phantomjs DB=pgsql TARGET_GROUP=admin03 TARGET_ENV=phantomjs,pgsql DOCKER_COMPOSE_VERSION=1.8.0
 
 matrix:
   fast_finish: true
   allow_failures:
-    - env: BROWSER=chrome DB=pgsql TARGET_GROUP=front TARGET_ENV=chrome,pgsql DOCKER_COMPOSE_VERSION=1.8.0
-    - env: BROWSER=chrome DB=pgsql TARGET_GROUP=admin01 TARGET_ENV=chrome,pgsql DOCKER_COMPOSE_VERSION=1.8.0
-    - env: BROWSER=chrome DB=pgsql TARGET_GROUP=admin02 TARGET_ENV=chrome,pgsql DOCKER_COMPOSE_VERSION=1.8.0
-    - env: BROWSER=chrome DB=pgsql TARGET_GROUP=admin03 TARGET_ENV=chrome,pgsql DOCKER_COMPOSE_VERSION=1.8.0
-    - env: BROWSER=chrome DB=mysql TARGET_GROUP=front TARGET_ENV=chrome,mysql DOCKER_COMPOSE_VERSION=1.8.0
-    - env: BROWSER=chrome DB=mysql TARGET_GROUP=admin01 TARGET_ENV=chrome,mysql DOCKER_COMPOSE_VERSION=1.8.0
-    - env: BROWSER=chrome DB=mysql TARGET_GROUP=admin02 TARGET_ENV=chrome,mysql DOCKER_COMPOSE_VERSION=1.8.0
-    - env: BROWSER=chrome DB=mysql TARGET_GROUP=admin03 TARGET_ENV=chrome,mysql DOCKER_COMPOSE_VERSION=1.8.0
-    - env: BROWSER=phantomjs DB=pgsql TARGET_GROUP=front TARGET_ENV=phantomjs,pgsql DOCKER_COMPOSE_VERSION=1.8.0
-    - env: BROWSER=phantomjs DB=pgsql TARGET_GROUP=admin01 TARGET_ENV=phantomjs,pgsql DOCKER_COMPOSE_VERSION=1.8.0
-    - env: BROWSER=phantomjs DB=pgsql TARGET_GROUP=admin02 TARGET_ENV=phantomjs,pgsql DOCKER_COMPOSE_VERSION=1.8.0
-    - env: BROWSER=phantomjs DB=pgsql TARGET_GROUP=admin03 TARGET_ENV=phantomjs,pgsql DOCKER_COMPOSE_VERSION=1.8.0
+    # - env: BROWSER=chrome DB=pgsql TARGET_GROUP=front TARGET_ENV=chrome,pgsql DOCKER_COMPOSE_VERSION=1.8.0
+    # - env: BROWSER=chrome DB=pgsql TARGET_GROUP=admin01 TARGET_ENV=chrome,pgsql DOCKER_COMPOSE_VERSION=1.8.0
+    # - env: BROWSER=chrome DB=pgsql TARGET_GROUP=admin02 TARGET_ENV=chrome,pgsql DOCKER_COMPOSE_VERSION=1.8.0
+    # - env: BROWSER=chrome DB=pgsql TARGET_GROUP=admin03 TARGET_ENV=chrome,pgsql DOCKER_COMPOSE_VERSION=1.8.0
+    # - env: BROWSER=chrome DB=mysql TARGET_GROUP=front TARGET_ENV=chrome,mysql DOCKER_COMPOSE_VERSION=1.8.0
+    # - env: BROWSER=chrome DB=mysql TARGET_GROUP=admin01 TARGET_ENV=chrome,mysql DOCKER_COMPOSE_VERSION=1.8.0
+    # - env: BROWSER=chrome DB=mysql TARGET_GROUP=admin02 TARGET_ENV=chrome,mysql DOCKER_COMPOSE_VERSION=1.8.0
+    # - env: BROWSER=chrome DB=mysql TARGET_GROUP=admin03 TARGET_ENV=chrome,mysql DOCKER_COMPOSE_VERSION=1.8.0
+    # - env: BROWSER=phantomjs DB=pgsql TARGET_GROUP=front TARGET_ENV=phantomjs,pgsql DOCKER_COMPOSE_VERSION=1.8.0
+    # - env: BROWSER=phantomjs DB=pgsql TARGET_GROUP=admin01 TARGET_ENV=phantomjs,pgsql DOCKER_COMPOSE_VERSION=1.8.0
+    # - env: BROWSER=phantomjs DB=pgsql TARGET_GROUP=admin02 TARGET_ENV=phantomjs,pgsql DOCKER_COMPOSE_VERSION=1.8.0
+    # - env: BROWSER=phantomjs DB=pgsql TARGET_GROUP=admin03 TARGET_ENV=phantomjs,pgsql DOCKER_COMPOSE_VERSION=1.8.0
 
 before_install:
     - sudo apt-get update
