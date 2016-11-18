@@ -125,7 +125,7 @@ class OrderEditPage extends AbstractAdminPage
 
     public function 注文者情報をコピー()
     {
-        $this->tester->executeJS('window.scrollTo(0, 1700);');
+        // $this->tester->executeJS('window.scrollTo(0, 1700);');
         $this->tester->click('#main #detail_wrap a.copyCustomerToShippingButton');
         return $this;
     }
