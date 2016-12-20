@@ -1,4 +1,4 @@
-FROM eccube/php7-ext-apache
+FROM nanasess/php7-ext-apache:7.0
 
 MAINTAINER Kentaro Ohkouchi <nanasess@fsm.ne.jp>
 
