@@ -45,9 +45,9 @@ class EF04CustomerCest
         $I->submitForm(".ec-off1Grid__cell form", $form);
 
         // 入力した会員情報を確認する。
-        $I->see('姓 名', '.ec-off1Grid__cell form .dl_table dl:nth-child(1) dd');
-        $I->see('111 - 111 - 111', '.ec-off1Grid__cell form .dl_table dl:nth-child(5) dd');
-        $I->see($new_email, '.ec-off1Grid__cell form .dl_table dl:nth-child(7) dd');
+        $I->see('姓 名', '.ec-off1Grid__cell form .ec-borderedDefs dl:nth-child(1) dd');
+        $I->see('111 - 111 - 111', '.ec-off1Grid__cell form .ec-borderedDefs dl:nth-child(5) dd');
+        $I->see($new_email, '.ec-off1Grid__cell form .ec-borderedDefs dl:nth-child(7) dd');
 
         $I->resetEmails();
         // 「会員登録をする」ボタンを押下する
@@ -114,7 +114,7 @@ class EF04CustomerCest
         ]);
 
         // 入力した会員情報を確認する。
-        $I->see('既に利用されているメールアドレスです', '.ec-off1Grid__cell form .dl_table dl:nth-child(7) dd');
+        $I->see('既に利用されているメールアドレスです', '.ec-off1Grid__cell form .ec-borderedDefs dl:nth-child(7) dd');
     }
 
     public function customer_会員登録異常2(\AcceptanceTester $I)
