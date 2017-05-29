@@ -42,16 +42,16 @@ class EF04CustomerCest
             $I->amGoingTo('メルマガプラグインを発見したため、メルマガを購読します');
             $form['entry[mailmaga_flg]'] = '1';
         }
-        $I->submitForm("#main_middle form", $form);
+        $I->submitForm(".ec-off1Grid__cell form", $form);
 
         // 入力した会員情報を確認する。
-        $I->see('姓 名', '#main_middle form .dl_table dl:nth-child(1) dd');
-        $I->see('111 - 111 - 111', '#main_middle form .dl_table dl:nth-child(5) dd');
-        $I->see($new_email, '#main_middle form .dl_table dl:nth-child(7) dd');
+        $I->see('姓 名', '.ec-off1Grid__cell form .dl_table dl:nth-child(1) dd');
+        $I->see('111 - 111 - 111', '.ec-off1Grid__cell form .dl_table dl:nth-child(5) dd');
+        $I->see($new_email, '.ec-off1Grid__cell form .dl_table dl:nth-child(7) dd');
 
         $I->resetEmails();
         // 「会員登録をする」ボタンを押下する
-        $I->click('#main_middle form .btn_group p:nth-child(1) button');
+        $I->click('.ec-off1Grid__cell form .btn_group p:nth-child(1) button');
 
         $I->seeEmailCount(2);
         foreach (array($new_email, $BaseInfo->getEmail01()) as $email) {
@@ -61,7 +61,7 @@ class EF04CustomerCest
         }
 
         // 「トップページへ」ボタンを押下する
-        $I->click('#main_middle .btn_group p a');
+        $I->click('.ec-off1Grid__cell .btn_group p a');
         $I->see('新着情報', '.ec-news__title');
 
 
@@ -71,7 +71,7 @@ class EF04CustomerCest
 
         // アクティベートURLからトップページへ
         $I->amOnPage($activateUrl);
-        $I->see('新規会員登録（完了）', '#contents #main #main_middle h1');
+        $I->see('新規会員登録（完了）', '#contents #main .ec-off1Grid__cell h1');
 
         $I->seeEmailCount(2);
         foreach (array($new_email, $BaseInfo->getEmail01()) as $email) {
@@ -80,7 +80,7 @@ class EF04CustomerCest
             $I->seeInLastEmailTo($email, '本会員登録が完了いたしました。');
         }
 
-        $I->click('#main_middle .btn_group p a');
+        $I->click('.ec-off1Grid__cell .btn_group p a');
         $I->see('新着情報', '.ec-news__title');
     }
 
@@ -94,7 +94,7 @@ class EF04CustomerCest
 
         // 会員情報入力フォームに、会員情報を入力する
         // 「同意する」ボタンを押下する
-        $I->submitForm("#main_middle form",[
+        $I->submitForm(".ec-off1Grid__cell form",[
             'entry[name][name01]' => '姓',
             'entry[name][name02]' => '名',
             'entry[kana][kana01]' => 'セイ',
@@ -114,7 +114,7 @@ class EF04CustomerCest
         ]);
 
         // 入力した会員情報を確認する。
-        $I->see('既に利用されているメールアドレスです', '#main_middle form .dl_table dl:nth-child(7) dd');
+        $I->see('既に利用されているメールアドレスです', '.ec-off1Grid__cell form .dl_table dl:nth-child(7) dd');
     }
 
     public function customer_会員登録異常2(\AcceptanceTester $I)
@@ -127,7 +127,7 @@ class EF04CustomerCest
 
         // 会員情報入力フォームに、会員情報を入力する
         // 「同意する」ボタンを押下する
-        $I->submitForm("#main_middle form",[
+        $I->submitForm(".ec-off1Grid__cell form",[
             'entry[name][name01]' => '',
             'entry[name][name02]' => '名',
             'entry[kana][kana01]' => 'セイ',
@@ -147,7 +147,7 @@ class EF04CustomerCest
         ]);
 
         // 入力した会員情報を確認する。
-        $I->see('新規会員登録', '#main_middle h1');
+        $I->see('新規会員登録', '.ec-off1Grid__cell h1');
 
         // TODO [fixture] 確認画面のあとでのメールアドレス重複エラー
     }
@@ -157,7 +157,7 @@ class EF04CustomerCest
         $I->wantTo('EF0401-UC01-T04 会員登録 同意しないボタン');
         $I->amOnPage('/entry');
 
-        $I->click('#main_middle form .no-padding .btn_group p:nth-child(2) a');
+        $I->click('.ec-off1Grid__cell form .no-padding .btn_group p:nth-child(2) a');
         $I->see('新着情報', '.ec-news__title');
     }
 
@@ -196,10 +196,10 @@ class EF04CustomerCest
             $I->amGoingTo('メルマガプラグインを発見したため、メルマガを購読します');
             $form['entry[mailmaga_flg]'] = '1';
         }
-        $I->submitForm("#main_middle form", $form);
+        $I->submitForm(".ec-off1Grid__cell form", $form);
 
-        $I->click('#main_middle form .btn_group p:nth-child(2) button');
-        $I->see('新規会員登録', '#main_middle h1');
+        $I->click('.ec-off1Grid__cell form .btn_group p:nth-child(2) button');
+        $I->see('新規会員登録', '.ec-off1Grid__cell h1');
     }
 
     public function customer_会員登録利用規約(\AcceptanceTester $I)
@@ -207,7 +207,7 @@ class EF04CustomerCest
         $I->wantTo('EF0404-UC01-T01 会員登録 利用規約');
         $I->amOnPage('/entry');
 
-        $I->click('#main_middle form .form_terms_link a');
+        $I->click('.ec-off1Grid__cell form .form_terms_link a');
 
         $I->switchToNewWindow();
         $I->seeInCurrentUrl('/help/agreement');
